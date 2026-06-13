@@ -75,11 +75,11 @@ const About = ({ theme }) => {
                   <div>
                     <h3 className="font-display text-xl font-bold text-slate-800 dark:text-white mb-1">Prakhar Agrawal</h3>
                     <div className="font-mono text-xs text-cyan-400/70 tracking-widest">BCA 2nd Year Student</div>
-                    <div className="font-mono text-xs text-slate-500 dark:text-white/35 tracking-wider mt-1">Prayagraj, UP, India</div>
+                     <div className="font-mono text-xs text-slate-600 dark:text-slate-350 tracking-wider mt-1">Prayagraj, UP, India</div>
                   </div>
                 </div>
 
-                <p className="font-body text-base text-slate-600 dark:text-white/60 leading-relaxed mb-6">
+                <p className="font-body text-base text-slate-700 dark:text-slate-200 leading-relaxed mb-6">
                   I'm a passionate BCA student with a deep love for Data Science and Web Development. 
                   With a CGPA of <span className="text-cyan-400 font-semibold">9.5</span>, I combine academic excellence with 
                   hands-on project experience. I thrive at the intersection of 
@@ -87,7 +87,7 @@ const About = ({ theme }) => {
                   <span className="text-green-400 font-semibold"> creative web design</span>.
                 </p>
 
-                <p className="font-body text-base text-slate-500 dark:text-white/50 leading-relaxed mb-8">
+                <p className="font-body text-base text-slate-600 dark:text-slate-300 leading-relaxed mb-8">
                   From building AI-powered health predictors to crafting WhatsApp analytics tools, 
                   I love turning complex data into meaningful, user-friendly experiences. 
                   Currently on a mission to secure my first data science internship.
@@ -144,7 +144,7 @@ const About = ({ theme }) => {
                     <div className="font-display text-xs tracking-widest mb-2" style={{ color: typeColors[item.type] }}>
                       {item.year}
                     </div>
-                    <div className="font-body text-sm text-slate-700 dark:text-white/70">{item.event}</div>
+                     <div className="font-body text-sm text-slate-800 dark:text-slate-200">{item.event}</div>
                   </div>
                 </motion.div>
               ))}
@@ -157,7 +157,7 @@ const About = ({ theme }) => {
               transition={{ delay: 1.5 }}
               className="mt-12 glass rounded-sm p-6 border-l-2 border-cyan-400/50"
             >
-              <p className="font-mono text-sm text-slate-500 dark:text-white/40 italic leading-relaxed">
+               <p className="font-mono text-sm text-slate-600 dark:text-slate-300 italic leading-relaxed">
                 "Data is the new oil, but only if you know how to refine it."
               </p>
               <div className="font-mono text-xs text-cyan-400/50 mt-3 tracking-widest">— My Philosophy</div>

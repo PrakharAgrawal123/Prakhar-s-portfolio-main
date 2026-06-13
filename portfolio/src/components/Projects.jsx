@@ -300,20 +300,20 @@ const ProjectCard = ({ project, index, inView }) => {
             </div>
 
             {/* Project description with high contrast */}
-            <p className="font-body text-sm text-slate-600 dark:text-white/60 leading-relaxed mb-5">
+            <p className="font-body text-sm text-slate-700 dark:text-slate-200 leading-relaxed mb-5">
               {project.description}
             </p>
 
             {/* Key Features grid */}
             <div className="mb-6">
-              <div className="font-mono text-[10px] text-slate-400 dark:text-white/30 tracking-widest uppercase mb-2.5">
+              <div className="font-mono text-[10px] text-slate-600 dark:text-slate-350 tracking-widest uppercase mb-2.5">
                 Key Highlights
               </div>
               <div className="grid grid-cols-2 gap-2">
                 {project.features.map((feature, i) => (
                   <div
                     key={i}
-                    className="flex items-center gap-2 font-mono text-[11px] text-slate-500 dark:text-white/40"
+                    className="flex items-center gap-2 font-mono text-[11px] text-slate-600 dark:text-slate-300"
                   >
                     <span style={{ color: project.color }}>▸</span>
                     <span className="truncate">{feature}</span>
@@ -450,7 +450,7 @@ const Projects = () => {
           <h2 className="section-title text-slate-800 dark:text-white text-3xl md:text-4xl font-display font-extrabold">
             Featured <span className="gradient-text">Projects</span>
           </h2>
-          <p className="font-body text-slate-500 dark:text-white/40 mt-4 max-w-xl mx-auto leading-relaxed text-sm md:text-base">
+          <p className="font-body text-slate-650 dark:text-slate-300 mt-4 max-w-xl mx-auto leading-relaxed text-sm md:text-base">
             Explore a curated selection of my professional work, bridging the
             gap between rigorous data analysis and high-fidelity web
             applications.

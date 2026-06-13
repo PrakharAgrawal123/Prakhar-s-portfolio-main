@@ -83,9 +83,8 @@ const TimelineCard = ({ item, index, isMobile, theme }) => {
         />
       </div>
 
-      {/* Responsive timeline card */}
       <motion.div
-        initial={{ opacity: 0, x: isMobile ? 30 : isLeft ? -50 : 50, y: 20 }}
+        initial={{ opacity: 0, x: isMobile ? 10 : isLeft ? -30 : 30, y: 20 }}
         animate={inView ? { opacity: 1, x: 0, y: 0 } : {}}
         transition={{ duration: 0.8, type: 'spring', stiffness: 60 }}
         className={`w-full md:w-[45%] overflow-visible ${
@@ -149,7 +148,7 @@ const TimelineCard = ({ item, index, isMobile, theme }) => {
             </div>
           </div>
 
-          <p className="font-body text-sm text-slate-600 dark:text-white/60 leading-relaxed mb-6">
+          <p className="font-body text-sm text-slate-700 dark:text-slate-200 leading-relaxed mb-6">
             {item.description}
           </p>
 
@@ -160,7 +159,7 @@ const TimelineCard = ({ item, index, isMobile, theme }) => {
             {item.details.map((detail, index) => (
               <li 
                 key={index} 
-                className={`font-mono text-xs text-slate-500 dark:text-white/40 flex items-center gap-2 ${
+                className={`font-mono text-xs text-slate-600 dark:text-slate-350 flex items-center gap-2 ${
                   isMobile ? 'justify-start' : isLeft ? 'md:justify-end md:flex-row-reverse' : 'justify-start'
                 }`}
               >
@@ -248,7 +247,7 @@ const Education = ({ theme }) => {
             Education & <span className="gradient-text">Journey</span>
           </h2>
           
-          <p className="font-mono text-xs text-slate-500 dark:text-white/40 mt-4 max-w-lg leading-relaxed">
+          <p className="font-mono text-xs text-slate-650 dark:text-slate-300 mt-4 max-w-lg leading-relaxed">
             A comprehensive look at my formal education landmarks, specialized disciplines, and district accomplishments.
           </p>
         </motion.div>

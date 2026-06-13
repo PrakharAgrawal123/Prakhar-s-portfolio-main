@@ -24,6 +24,8 @@ const Cursor = () => {
       return;
     }
 
+    document.body.classList.add('no-cursor');
+
     const handleMouseMove = (e) => {
       mouse.current = { x: e.clientX, y: e.clientY };
       if (dotRef.current) {
@@ -55,6 +57,7 @@ const Cursor = () => {
     rafRef.current = requestAnimationFrame(animate);
 
     return () => {
+      document.body.classList.remove('no-cursor');
       window.removeEventListener('mousemove', handleMouseMove);
       document.removeEventListener('mouseover', handleEnter);
       document.removeEventListener('mouseout', handleLeave);

@@ -12,7 +12,7 @@ const Footer = ({ theme }) => {
             <div className="font-display text-2xl font-black gradient-text tracking-widest mb-1">
               PRAKHAR<span className="text-slate-400 dark:text-white/20">.</span>DEV
             </div>
-            <div className="font-mono text-xs text-slate-500 dark:text-white/20 tracking-widest">
+            <div className="font-mono text-xs text-slate-600 dark:text-slate-350 tracking-widest">
               Data Scientist & Analyst 
             </div>
           </div>
@@ -23,7 +23,7 @@ const Footer = ({ theme }) => {
               <a
                 key={link}
                 href={`#${link.toLowerCase()}`}
-                className="font-mono text-xs text-slate-500 dark:text-white/30 hover:text-cyan-400 transition-colors tracking-widest uppercase"
+                className="font-mono text-xs text-slate-605 dark:text-white/50 hover:text-cyan-400 transition-colors tracking-widest uppercase"
               >
                 {link}
               </a>
@@ -31,9 +31,9 @@ const Footer = ({ theme }) => {
           </div>
 
           {/* Copyright */}
-          <div className="font-mono text-xs text-slate-500 dark:text-white/20 tracking-wide text-center md:text-right">
+          <div className="font-mono text-xs text-slate-600 dark:text-slate-350 tracking-wide text-center md:text-right">
             <div>© 2026 Prakhar Agrawal</div>
-            <div className="mt-1 text-slate-400 dark:text-white/10">Built with ❤️ by Prakhar Agrawal</div>
+            <div className="mt-1 text-slate-550 dark:text-slate-350">Built with ❤️ by Prakhar Agrawal</div>
           </div>
         </div>
 

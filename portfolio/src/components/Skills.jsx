@@ -284,8 +284,8 @@ const Skills = ({ theme }) => {
 
               // Calculate 3D projected coordinates
               // Rx: radius X, Ry: radius Y
-              const Rx = isMobile ? 135 : isTablet ? 280 : 380;
-              const Ry = isMobile ? 25 : isTablet ? 55 : 80;
+              const Rx = isMobile ? Math.min(135, windowWidth * 0.38) : isTablet ? 280 : 380;
+              const Ry = isMobile ? Math.min(25, windowWidth * 0.07) : isTablet ? 55 : 80;
 
               const x = Rx * Math.sin(angle);
               // Negative cos creates a dome curving upwards in the center (front is closer)
@@ -383,7 +383,7 @@ const Skills = ({ theme }) => {
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -8 }}
                 transition={{ duration: 0.2 }}
-                className="font-display text-sm tracking-[0.25em] uppercase font-bold text-slate-700 dark:text-white/60 drop-shadow-[0_2px_4px_rgba(0,0,0,0.1)]"
+                className="font-display text-sm tracking-[0.25em] uppercase font-bold text-slate-800 dark:text-slate-200 drop-shadow-[0_2px_4px_rgba(0,0,0,0.1)]"
               >
                 {hoveredSkill ? hoveredSkill.name : "Technologies I Use"}
               </motion.span>

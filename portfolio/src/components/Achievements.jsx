@@ -172,7 +172,7 @@ const AchievementCard = ({ achievement, index, isLargeScreen }) => {
               </div>
             </div>
 
-            <p className="font-body text-[13.5px] text-slate-600 dark:text-white/60 leading-relaxed mb-6">
+            <p className="font-body text-[13.5px] text-slate-700 dark:text-slate-200 leading-relaxed mb-6">
               {achievement.description}
             </p>
           </div>
@@ -183,7 +183,7 @@ const AchievementCard = ({ achievement, index, isLargeScreen }) => {
               <motion.span
                 key={tag}
                 whileHover={{ scale: 1.05, color: '#ffffff', borderColor: 'rgba(255,255,255,0.2)' }}
-                className="font-mono text-[10.5px] px-2.5 py-1 rounded-sm text-slate-500 dark:text-white/40 cursor-default transition-all duration-300"
+                className="font-mono text-[10.5px] px-2.5 py-1 rounded-sm text-slate-600 dark:text-slate-350 cursor-default transition-all duration-300"
                 style={{
                   border: '1px solid rgba(255,255,255,0.06)',
                   background: 'rgba(255,255,255,0.01)',
@@ -243,7 +243,7 @@ const StatCard = ({ stat, index }) => {
         <span className="text-xl ml-0.5 font-bold">{suffix}</span>
       </div>
 
-      <div className="font-mono text-[10.5px] text-slate-500 dark:text-white/40 tracking-widest uppercase font-semibold mt-1">
+      <div className="font-mono text-[10.5px] text-slate-650 dark:text-slate-350 tracking-widest uppercase font-semibold mt-1">
         {stat.label}
       </div>
     </motion.div>
@@ -344,7 +344,7 @@ const Achievements = ({ theme }) => {
             Achievements & <span className="gradient-text">Recognition</span>
           </motion.h2>
           
-          <motion.p variants={itemVariants} className="font-mono text-xs text-slate-500 dark:text-white/40 mt-4 max-w-lg leading-relaxed">
+          <motion.p variants={itemVariants} className="font-mono text-xs text-slate-650 dark:text-slate-300 mt-4 max-w-lg leading-relaxed">
             Recognitions, competition records, and academic milestones from my journey in AI & software development.
           </motion.p>
         </motion.div>
@@ -416,7 +416,7 @@ const Achievements = ({ theme }) => {
                       {item.progress}%
                     </span>
                   </div>
-                  <div className="font-body text-sm font-semibold text-slate-700 dark:text-white/70 mb-5 tracking-wide leading-snug">
+                  <div className="font-body text-sm font-semibold text-slate-800 dark:text-slate-200 mb-5 tracking-wide leading-snug">
                     {item.goal}
                   </div>
                 </div>
@@ -440,7 +440,7 @@ const Achievements = ({ theme }) => {
                       />
                     </motion.div>
                   </div>
-                  <div className="font-mono text-[10.5px] text-slate-500 dark:text-white/35 mt-2 flex justify-between">
+                   <div className="font-mono text-[10.5px] text-slate-600 dark:text-slate-350 mt-2 flex justify-between">
                     <span>Milestone progress</span>
                     <span style={{ color: item.color }}>{item.progress}% there</span>
                   </div>

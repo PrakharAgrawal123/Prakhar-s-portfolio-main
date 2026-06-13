@@ -26,18 +26,25 @@ const Navbar = ({ theme, toggleTheme }) => {
   const [active, setActive] = useState('hero');
 
   useEffect(() => {
+    let ticking = false;
     const handleScroll = () => {
-      setScrolled(window.scrollY > 50);
-      const sections = navLinks.map(l => l.href.slice(1));
-      for (const id of [...sections].reverse()) {
-        const el = document.getElementById(id);
-        if (el && window.scrollY >= el.offsetTop - 100) {
-          setActive(id);
-          break;
-        }
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          setScrolled(window.scrollY > 50);
+          const sections = navLinks.map(l => l.href.slice(1));
+          for (const id of [...sections].reverse()) {
+            const el = document.getElementById(id);
+            if (el && window.scrollY >= el.offsetTop - 100) {
+              setActive(id);
+              break;
+            }
+          }
+          ticking = false;
+        });
+        ticking = true;
       }
     };
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
@@ -179,26 +186,40 @@ const Navbar = ({ theme, toggleTheme }) => {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
-            className="lg:hidden glass border-t border-slate-200/50 dark:border-white/10 overflow-hidden"
+            className="lg:hidden bg-white/95 dark:bg-slate-950/95 backdrop-blur-md border-t border-slate-200 dark:border-white/10 overflow-hidden shadow-2xl relative z-50"
           >
-            <div className="px-6 py-8 flex flex-wrap justify-center gap-4">
-              {navLinks.map(({ label, href, icon, gradientFrom, gradientTo }) => (
-                <a
-                  key={href}
-                  href={href}
-                  onClick={(e) => { e.preventDefault(); scrollTo(href); }}
-                  style={{ '--gradient-from': gradientFrom, '--gradient-to': gradientTo }}
-                  className="flex flex-col items-center gap-2 group"
-                >
-                  <div className="w-12 h-12 rounded-full flex items-center justify-center bg-slate-100 dark:bg-white/5 border border-slate-200 dark:border-white/10 group-hover:border-transparent transition-all relative">
-                    <span className="absolute inset-0 rounded-full bg-[linear-gradient(45deg,var(--gradient-from),var(--gradient-to))] opacity-0 group-hover:opacity-100 transition-opacity"></span>
-                    <span className="relative z-10 text-xl text-slate-600 dark:text-white/60 group-hover:text-white transition-colors">{icon}</span>
-                  </div>
-                  <span className="text-[10px] uppercase tracking-widest text-slate-500 dark:text-white/40 group-hover:text-slate-900 dark:group-hover:text-white transition-colors">
-                    {label}
-                  </span>
-                </a>
-              ))}
+            <div className="px-6 py-8 grid grid-cols-2 gap-3">
+              {navLinks.map(({ label, href, icon }) => {
+                const isActive = active === href.slice(1);
+                return (
+                  <a
+                    key={href}
+                    href={href}
+                    onClick={(e) => { e.preventDefault(); scrollTo(href); }}
+                    className={`flex items-center gap-3 px-4 py-3 rounded-md border transition-all duration-300 ${
+                      isActive
+                        ? 'bg-cyan-500/10 border-cyan-400 text-cyan-500 dark:text-cyan-400 font-bold'
+                        : 'bg-slate-50 dark:bg-white/5 border-slate-200 dark:border-white/5 text-slate-700 dark:text-white/70 hover:border-cyan-400/50 hover:text-cyan-500'
+                    }`}
+                  >
+                    <span className={`text-lg transition-transform duration-300 ${isActive ? 'scale-110' : ''}`}>
+                      {icon}
+                    </span>
+                    <span className="font-mono text-xs uppercase tracking-wider">
+                      {label}
+                    </span>
+                  </a>
+                );
+              })}
+              
+              {/* Mobile CTA */}
+              <a
+                href="#contact"
+                onClick={(e) => { e.preventDefault(); scrollTo('#contact'); }}
+                className="col-span-2 btn-primary text-center text-xs py-3 rounded-md font-bold uppercase tracking-widest mt-2 block"
+              >
+                Hire Me
+              </a>
             </div>
           </motion.div>
         )}

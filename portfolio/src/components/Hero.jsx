@@ -3,17 +3,38 @@ import { motion } from 'framer-motion';
 import { TypeAnimation } from 'react-type-animation';
 import { useInView } from 'react-intersection-observer';
 import { Card, CardContent } from './ui/card';
-import { SplineScene } from './ui/splite';
+import ParticleNetwork from './ui/particle-network';
 import VaporizeTextCycle, { Tag } from './ui/vapour-text';
 
 const Hero = ({ theme }) => {
   const [isLargeScreen, setIsLargeScreen] = React.useState(false);
+  const [titleFontSize, setTitleFontSize] = React.useState('80px');
+  const [titleHeight, setTitleHeight] = React.useState('90px');
   const { ref: heroRef, inView: heroInView } = useInView({
     threshold: 0,
   });
 
   React.useEffect(() => {
-    const checkScreen = () => setIsLargeScreen(window.innerWidth >= 1024);
+    const checkScreen = () => {
+      setIsLargeScreen(window.innerWidth >= 1024);
+      const width = window.innerWidth;
+      if (width < 380) {
+        setTitleFontSize('38px');
+        setTitleHeight('48px');
+      } else if (width < 480) {
+        setTitleFontSize('46px');
+        setTitleHeight('56px');
+      } else if (width < 640) {
+        setTitleFontSize('56px');
+        setTitleHeight('66px');
+      } else if (width < 1024) {
+        setTitleFontSize('68px');
+        setTitleHeight('78px');
+      } else {
+        setTitleFontSize('80px');
+        setTitleHeight('90px');
+      }
+    };
     checkScreen();
     window.addEventListener('resize', checkScreen);
     return () => window.removeEventListener('resize', checkScreen);
@@ -74,12 +95,12 @@ const Hero = ({ theme }) => {
                   className="mb-5"
                 >
                   {/* PRAKHAR — white/light */}
-                  <div style={{ height: '90px', width: '100%' }}>
+                  <div style={{ height: titleHeight, width: '100%' }}>
                     <VaporizeTextCycle
                       texts={["PRAKHAR"]}
                       font={{
                         fontFamily: "'Plus Jakarta Sans', sans-serif",
-                        fontSize: '80px',
+                        fontSize: titleFontSize,
                         fontWeight: 900,
                       }}
                       color={theme === 'dark' ? "rgb(230, 230, 230)" : "rgb(15, 23, 42)"}
@@ -92,12 +113,12 @@ const Hero = ({ theme }) => {
                     />
                   </div>
                   {/* AGRAWAL — cyan */}
-                  <div style={{ height: '90px', width: '100%' }}>
+                  <div style={{ height: titleHeight, width: '100%' }}>
                     <VaporizeTextCycle
                       texts={["AGRAWAL"]}
                       font={{
                         fontFamily: "'Plus Jakarta Sans', sans-serif",
-                        fontSize: '80px',
+                        fontSize: titleFontSize,
                         fontWeight: 900,
                       }}
                       color="rgb(0, 245, 255)"
@@ -206,26 +227,17 @@ const Hero = ({ theme }) => {
                 </motion.div>
               </div>
 
-              {/* RIGHT: Spline Robot */}
-              <div className="relative flex-1 min-h-[400px] lg:min-h-[600px] overflow-hidden">
-                {/* Subtle glow behind robot */}
+              {/* RIGHT: Interactive Particle Network */}
+              <div className="relative flex-1 min-h-[300px] lg:min-h-[600px] overflow-hidden border-t lg:border-t-0 lg:border-l border-slate-200/50 dark:border-white/5 bg-slate-50/10 dark:bg-black/15">
+                {/* Subtle glow behind network */}
                 <div
                   className="absolute inset-0 pointer-events-none z-0"
                   style={{
-                    background: 'radial-gradient(ellipse at 60% 50%, rgba(0,245,255,0.08) 0%, transparent 70%)',
+                    background: 'radial-gradient(ellipse at 50% 50%, rgba(0,245,255,0.05) 0%, transparent 70%)',
                   }}
                 />
                 <div className="absolute inset-0 z-10">
-                  {heroInView && isLargeScreen ? (
-                    <SplineScene
-                      scene="https://prod.spline.design/kZDDjO5HuC9GJUM2/scene.splinecode"
-                      className="w-full h-full"
-                    />
-                  ) : (
-                    <div className="w-full h-full flex items-center justify-center pointer-events-none">
-                      <div className="w-48 h-48 rounded-full bg-cyan-500/10 blur-[80px] animate-pulse" />
-                    </div>
-                  )}
+                  <ParticleNetwork theme={theme} />
                 </div>
               </div>
 

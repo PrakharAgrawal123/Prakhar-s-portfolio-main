@@ -158,7 +158,7 @@ const Contact = () => {
           <h2 className="section-title text-slate-800 dark:text-white text-3xl md:text-4xl font-display font-extrabold">
             Get In <span className="gradient-text">Touch</span>
           </h2>
-          <p className="font-body text-slate-500 dark:text-white/55 mt-4 max-w-xl mx-auto lg:mx-0 leading-relaxed text-base md:text-lg">
+          <p className="font-body text-slate-650 dark:text-slate-300 mt-4 max-w-xl mx-auto lg:mx-0 leading-relaxed text-base md:text-lg">
             I'm always open to discussing new opportunities, exciting projects, or just having a conversation about data and tech.
           </p>
         </motion.div>
@@ -189,10 +189,10 @@ const Contact = () => {
                     {item.icon}
                   </span>
                   <div>
-                    <div className="font-mono text-[10px] text-slate-400 dark:text-white/30 tracking-widest uppercase">
+                    <div className="font-mono text-[10px] text-slate-650 dark:text-slate-350 tracking-widest uppercase">
                       {item.label}
                     </div>
-                    <div className="font-body text-sm font-semibold text-slate-700 dark:text-white/70 mt-1">
+                    <div className="font-body text-sm font-semibold text-slate-800 dark:text-slate-200 mt-1">
                       {item.value}
                     </div>
                   </div>
@@ -202,7 +202,7 @@ const Contact = () => {
 
             {/* Social Links */}
             <div>
-              <div className="font-mono text-xs text-slate-400 dark:text-white/30 tracking-widest uppercase mb-4 text-center lg:text-left font-bold">
+              <div className="font-mono text-xs text-slate-655 dark:text-slate-350 tracking-widest uppercase mb-4 text-center lg:text-left font-bold">
                 Find Me Online
               </div>
               <div className="flex gap-3 flex-wrap justify-center lg:justify-start">
@@ -283,7 +283,7 @@ const Contact = () => {
                       <h3 className="font-display text-xl font-bold text-slate-800 dark:text-white mb-2">
                         Message Transmitted!
                       </h3>
-                      <p className="font-body text-sm text-slate-500 dark:text-white/50 max-w-sm mb-8 leading-relaxed">
+                      <p className="font-body text-sm text-slate-650 dark:text-slate-300 max-w-sm mb-8 leading-relaxed">
                         Thank you for reaching out! Your message details have been saved successfully to Google Sheets. Prakhar will review your submission and reply shortly.
                       </p>
 
