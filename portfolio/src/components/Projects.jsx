@@ -4,27 +4,27 @@ import { useInView } from "react-intersection-observer";
 import { Card, CardContent } from "./ui/card";
 
 const projects = [
-  {
-    id: 1,
-    title: "WhatsApp Chat Analyzer",
-    emoji: "💬",
-    description:
-      "A comprehensive NLP & data visualization web application analyzing exported chats for user timelines, emoji distributions, word clouds, and sentiment trends.",
-    tech: ["Python", "Streamlit", "Pandas", "Matplotlib", "NLP", "Seaborn"],
-    features: [
-      "Message heatmaps",
-      "Word cloud analysis",
-      "User activity metrics",
-      "Sentiment trends",
-    ],
-    github: "https://github.com/PrakharAgrawal123",
-    live: "https://github.com/PrakharAgrawal123",
-    image: "/projects/whatsapp_analyzer.png",
-    color: "#00f5ff",
-    gradient: "from-cyan-500/10 to-blue-500/5",
-    category: "datascience",
-    status: "Data Science",
-  },
+{
+  id: 1,
+  title: "ViralScore — LinkedIn Virality Predictor",
+  emoji: "⚡",
+  description:
+    "An AI-powered full-stack web application that predicts LinkedIn post virality before publishing. Paste your draft to get an ML-based score out of 100, sentence-level NLP breakdown, GPT-powered rewrite suggestions, and optimal posting time recommendations.",
+  tech: ["Python", "Flask", "React", "Tailwind CSS", "scikit-learn", "OpenAI API", "NLP", "Framer Motion"],
+  features: [
+    "ML virality score (0–100)",
+    "Sentence breakdown analysis",
+    "AI rewrite suggestions",
+    "Best time to post",
+  ],
+  github: "https://github.com/PrakharAgrawal123/LinkedIn-Post-Virality-Predictor",
+  live: "https://github.com/PrakharAgrawal123/LinkedIn-Post-Virality-Predictor",
+  image: "/projects/viralscore.png",
+  color: "#6366F1",
+  gradient: "from-indigo-500/10 to-violet-500/5",
+  category: "datascience",
+  status: "Data Science",
+},
   {
     id: 2,
     title: "AI Health Predictor",
