@@ -125,54 +125,6 @@ const projects = [
     status: "Live",
   },
 
-  {
-    id: 6,
-    title: "ZenTask SaaS Planner",
-    emoji: "📋",
-    description:
-      "A sleek Kanban board planner utilizing drag-and-drop mechanics to optimize agile workflows, project lists, and tag managers.",
-    tech: [
-      "React",
-      "Framer Motion",
-      "HTML5 Drag & Drop",
-      "Local Storage",
-      "Tailwind CSS",
-    ],
-    features: [
-      "Fluid drag & drop mechanics",
-      "Agile kanban pipelines",
-      "Customizable lists & tags",
-      "Team workflow stats",
-    ],
-    github: "https://github.com/PrakharAgrawal123",
-    live: "https://github.com/PrakharAgrawal123",
-    image: "/projects/task_planner.png",
-    color: "#1e90ff",
-    gradient: "from-blue-500/10 to-indigo-500/5",
-    category: "webdev",
-    status: "Productivity",
-  },
-  {
-    id: 7,
-    title: "AI Image Studio",
-    emoji: "🎨",
-    description:
-      "Creative digital art studio connected to OpenAI DALL-E models to generate, display, and share descriptive paintings within a showcase gallery.",
-    tech: ["React", "OpenAI API", "Tailwind CSS", "Cloudinary", "Node.js"],
-    features: [
-      "Prompt optimization filters",
-      "Creative painting galleries",
-      "High-res image downloads",
-      "Cloud workspace integrations",
-    ],
-    github: "https://github.com/PrakharAgrawal123",
-    live: "https://github.com/PrakharAgrawal123",
-    image: "/projects/ai_images.png",
-    color: "#ff1493",
-    gradient: "from-pink-500/10 to-purple-500/5",
-    category: "webdev",
-    status: "AI Tech",
-  },
 ];
 
 const categories = [
