@@ -12,7 +12,7 @@ const interests = [
 ];
 
 const timeline = [
-  { year: '2023', event: 'Started BCA at Shri Ram Murti Smarak College', type: 'edu' },
+  { year: '2024', event: 'Started BCA at United University Prayagraj', type: 'edu' },
   { year: '2024', event: 'Built first ML model – AI Health Predictor', type: 'project' },
   { year: '2024', event: 'GSSoC Campus Ambassador', type: 'achievement' },
   { year: '2024', event: 'Participated in HackDiwas Hackathon', type: 'achievement' },
