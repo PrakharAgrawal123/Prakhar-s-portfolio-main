@@ -20,11 +20,6 @@
     overflow-x: hidden;
   }
 
-  /* Custom cursor helper classes */
-  body.no-cursor, body.no-cursor * {
-    cursor: none !important;
-  }
-
   ::-webkit-scrollbar {
     width: 4px;
   }
@@ -191,29 +186,6 @@
   @keyframes scanLine {
     0% { transform: translateY(-100px); }
     100% { transform: translateY(100vh); }
-  }
-
-  .cursor-dot {
-    width: 8px;
-    height: 8px;
-    background: #00f5ff;
-    border-radius: 50%;
-    position: fixed;
-    pointer-events: none;
-    z-index: 10000;
-    transition: transform 0.1s ease;
-    box-shadow: 0 0 10px rgba(0, 245, 255, 0.8);
-  }
-
-  .cursor-ring {
-    width: 32px;
-    height: 32px;
-    border: 1px solid rgba(0, 245, 255, 0.5);
-    border-radius: 50%;
-    position: fixed;
-    pointer-events: none;
-    z-index: 9999;
-    transition: all 0.15s ease;
   }
 }
 

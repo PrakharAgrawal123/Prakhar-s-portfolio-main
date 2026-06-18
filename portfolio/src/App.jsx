@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import Loader from './components/Loader';
-import Cursor from './components/Cursor';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import About from './components/About';
@@ -37,7 +36,6 @@ function App() {
 
   return (
     <>
-      <Cursor />
       <div className="scan-line animate-scan" />
       {loading ? (
         <Loader />
