@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { TypeAnimation } from 'react-type-animation';
 import { useInView } from 'react-intersection-observer';
 import { Card, CardContent } from './ui/card';
-import ParticleNetwork from './ui/particle-network';
+import HolographicOrb from './ui/HolographicOrb';
 import VaporizeTextCycle, { Tag } from './ui/vapour-text';
 
 const Hero = ({ theme }) => {
@@ -236,8 +236,8 @@ const Hero = ({ theme }) => {
                     background: 'radial-gradient(ellipse at 50% 50%, rgba(0,245,255,0.05) 0%, transparent 70%)',
                   }}
                 />
-                <div className="absolute inset-0 z-10">
-                  <ParticleNetwork theme={theme} />
+                <div className="absolute inset-0 z-10 flex items-center justify-center">
+                  <HolographicOrb theme={theme} />
                 </div>
               </div>
 
