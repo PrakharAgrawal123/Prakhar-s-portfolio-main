@@ -18,7 +18,7 @@ const projects = [
     "Best time to post",
   ],
   github: "https://github.com/PrakharAgrawal123/LinkedIn-Post-Virality-Predictor",
-  live: "https://github.com/PrakharAgrawal123/LinkedIn-Post-Virality-Predictor",
+  live: "https://viral-score-eight.vercel.app",
   image: "/projects/viralscore.png",
   color: "#6366F1",
   gradient: "from-indigo-500/10 to-violet-500/5",
