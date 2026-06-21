@@ -126,7 +126,7 @@ const projects = [
   },
 
 {
-  id: 3,
+  id: 6,
   title: "Foodie Landing Page",
   emoji: "🍽️",
   description:
