@@ -125,6 +125,39 @@ const projects = [
     status: "Live",
   },
 
+{
+  id: 3,
+  title: "Foodie Landing Page",
+  emoji: "🍽️",
+  description:
+    "A modern, responsive, and interactive food landing page designed for restaurants and food brands, featuring dynamic UI elements, cart functionality, testimonials, and smooth animations.",
+  tech: [
+    "HTML5",
+    "CSS3",
+    "JavaScript",
+    "Google Fonts",
+    "Font Awesome",
+    "Responsive Design"
+  ],
+  features: [
+    "Responsive layout",
+    "Sticky navbar",
+    "Interactive shopping cart",
+    "Dish search & category filter",
+    "Testimonials slider",
+    "Favorite dishes",
+    "Newsletter subscription",
+    "Smooth scroll animations"
+  ],
+  github: "https://github.com/PrakharAgrawal123/Foodie-Hub-Landing-page",
+  live: "https://foodiee-hub-720195.netlify.app/",
+  image: "/projects/foodiehub.png",
+  color: "#ff6b35",
+  gradient: "from-orange-500/10 to-red-500/5",
+  category: "webdev",
+  status: "Live",
+},
+
 ];
 
 const categories = [
